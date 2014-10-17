@@ -91,7 +91,7 @@ CFWriteStreamRef writeStream;
 			if(stream == outputStream) {
 				NSLog(@"outputStream is ready.");
                 
-                NSString *response  = @"search^10|5|2|1 abcdefgh\r\n\r\n"; // request parameter
+                NSString *response  = REQUEST_DETAILS 
                 NSData *data = [[NSData alloc] initWithData:[response dataUsingEncoding:NSASCIIStringEncoding]];
                 
                 [outputStream write:[data bytes] maxLength:[data length]];
